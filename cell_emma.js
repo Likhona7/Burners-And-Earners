@@ -78,20 +78,37 @@ var arr1 = arr.replace(/“/g, "").split("”");
 var appArr = [];
 arr1.forEach(function(str){
   appArr.push(str.split(" "));
+
+
+
 });
 
-console.log(appArr);
+ var wantedApps = [];
 
-var wordStats = appArr.map(function(word){
-    //more attributes can be added below
-    return {
-        name : word[0],
-        app : word
-    };
+appArr.forEach(function(searc){
+
+if (indexOf("Faceblock" > -1 )){
+  wantedApps.push(Faceblock);
+}
+
 });
 
-    console.log(wordStats);
+console.log(wantedApps);
 
+// var wordStats = appArr.map(function(word){
+//     //more attributes can be added below
+//     return {
+//         name : word[0],
+//         app : word
+//     };
+// });
+
+//     console.log(wordStats);
+
+//  var wantedApps = [];
+// if (indexOf("Faceblock" > -1 )){
+//   wantedApps.push(Faceblock)
+// }
 // function searchStringInArray (str, strArray) {
 //     for (var j=0; j<strArray.length; j++) {
 //         if (strArray.match(str)){
