@@ -78,31 +78,27 @@ var arr1 = arr.replace(/“/g, "").split("”");
 var appArr = [];
 arr1.forEach(function(str){
   appArr.push(str.split(" "));
-    //user1.push(str.split(' '));
 });
 
 console.log(appArr);
 
+var wordStats = appArr.map(function(word){
+    //more attributes can be added below
+    return {
+        name : word[0],
+        app : word
+    };
+});
 
+    console.log(wordStats);
 
-//  var array = [];
-
-//   inputArr.forEach(function(str) {
-//     array.push(str.match(/\w+/g));
-//   });
-
-//   var personApp = {};
-
-//   array.forEach(function(arr) {
-//     apps.forEach(function(app) {
-//       arr.forEach(function(word) {
-//         if (word === app) {
-//           if (!personApp.hasOwnProperty(arr[0])) {
-//             personApp[arr[0]] = [word];
-//           } else {
-//             personApp[arr[0]].push(word);
-//           }
-//         }
-//       });
-//     });
-//   });
+// function searchStringInArray (str, strArray) {
+//     for (var j=0; j<strArray.length; j++) {
+//         if (strArray.match(str)){
+//           return j;
+//     }
+//     return -1;
+//   }
+// }
+// searchStringInArray("Faceblock", appArr)
+// console.log(wordStats);
